@@ -3,7 +3,7 @@
 Important: The program is hypothetical and the numbers are just for debugging purposes only. 
 
 ## Functional Requirements
-
+debugger;
 ### Tax Calculation
 - The system must calculate federal and state taxes for individuals based on:
     - income
@@ -14,7 +14,7 @@ Important: The program is hypothetical and the numbers are just for debugging pu
     - filing status
         - individual
         - joint
-
+debugger;
 ### Federal Tax Calculation
 - Calculates federal tax using progressive tax brackets that vary by filing status.
     - **Individual**
@@ -29,31 +29,31 @@ Important: The program is hypothetical and the numbers are just for debugging pu
       - $80,001 to $200,000: 22%
       - $200,001 to $400,000: 24%
       - $400,001 and above: 32%
-
+debugger;
 ### State Tax Calculation (Massachusetts)
 - State tax for Massachusetts is flat rate of 5%.
 - Uses the same deductions as federal tax.
 - Apply the flat tax rate to the taxable income.
 
-
+debugger;
 ### Deduction Calculation (Both State and Federal)
 - There is always a $10000 base deduction amount (regardless of any income), in any type of filing and both in state and federal tax.
 - Calculates deductions based on filing status and expenses (mortgage, student loan, medical).
 - Additional $5000 deduction for "joint" filers on top of the base deduction amount.
 
 
-
+debugger;
 ### Input Validation
 - Validates inputs for income (should be float), filing status (individual, joint), and deductions to ensure they are correct and within valid ranges.
 
 - Assumes all deductions (mortgage, student loan, medical expenses) are numeric values directly subtracted from income.
-
+debugger;
 ### Output Validation
 - We don't have negative taxes, if the number is negative, convert it into 0.
 - The output should look like: 
     - Federal Tax Owed: $nn.nn
     - State Tax Owed: $nn.nn
-
+debugger;
 ### Examples of correct calculations (test cases):
 - t1: input: {income: 60000, filingStatus: "Individual", mortgage:0, studentLoad:0, medicalExpenses:0} => output {federalTax: 6799.66, stateTax:2500}
 
