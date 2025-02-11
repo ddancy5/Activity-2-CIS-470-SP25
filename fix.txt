@@ -1,0 +1,10 @@
+1) In function `calculateFederalTax`: Fixed incorrect application of tax brackets. 
+   Changed: if (income > 100000) { rate = 0.22 } 
+   To: if (income > 100000 && income <= 200000) { rate = 0.22 }
+
+2) In function `calculateDeductions`: Applied additional $5,000 deduction for joint filers.
+   Added logic to check filing status and apply extra deduction for joint filers.
+
+3) In function `calculateStateTax`: Fixed incorrect application of flat 5% tax rate after deductions.
+   Changed: stateTax = taxableIncome * 0.05
+   To: stateTax = Math.max(0, taxableIncome * 0.05)
